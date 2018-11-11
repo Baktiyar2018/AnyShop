@@ -1,15 +1,15 @@
 package com.uraliev.anyshop.data.user;
 
 
-import com.uraliev.anyshop.core.callback.BaseCallback;
-import com.uraliev.anyshop.model.LoginEntity;
+import com.uraliev.core.callback.BaseCallback;
+import com.uraliev.anyshop.model.UserEntity;
 
 // Created by askar on 11/2/18.
 public interface UserDataSource {
 
-    void checkLogin(LoginEntity loginData, DSCheckLoginCallback callback);
+    void checkLogin(UserEntity loginData, DSCheckLoginCallback callback);
 
-    LoginEntity getLoginData();
+    UserEntity getLoginData();
 
     abstract class DSCheckLoginCallback implements BaseCallback<Boolean> {
         @Override

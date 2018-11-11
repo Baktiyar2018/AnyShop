@@ -1,7 +1,7 @@
 package com.uraliev.anyshop.data.user;
 
 
-import com.uraliev.anyshop.model.LoginEntity;
+import com.uraliev.anyshop.model.UserEntity;
 
 public class UserRepository implements UserDataSource {
 
@@ -36,14 +36,14 @@ public class UserRepository implements UserDataSource {
     //region Contract
 
     @Override
-    public void checkLogin(LoginEntity loginData, DSCheckLoginCallback callback) {
+    public void checkLogin(UserEntity loginData, DSCheckLoginCallback callback) {
         if (mLocalDataSource != null) {
             mLocalDataSource.checkLogin(loginData, callback);
         }
     }
 
     @Override
-    public LoginEntity getLoginData() {
+    public UserEntity getLoginData() {
         if (mLocalDataSource != null) {
             return mLocalDataSource.getLoginData();
         }

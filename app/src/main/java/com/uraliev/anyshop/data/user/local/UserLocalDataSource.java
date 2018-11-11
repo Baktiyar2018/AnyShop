@@ -3,7 +3,7 @@ package com.uraliev.anyshop.data.user.local;
 
 import com.uraliev.anyshop.data.user.UserBaseDataSource;
 import com.uraliev.anyshop.data.user.UserDataSource;
-import com.uraliev.anyshop.model.LoginEntity;
+import com.uraliev.anyshop.model.UserEntity;
 
 public class UserLocalDataSource extends UserBaseDataSource {
     private String USERNAME = "Tameki";
@@ -27,7 +27,7 @@ public class UserLocalDataSource extends UserBaseDataSource {
     //region Contract
 
     @Override
-    public void checkLogin(LoginEntity loginData, DSCheckLoginCallback callback) {
+    public void checkLogin(UserEntity loginData, DSCheckLoginCallback callback) {
         callback.onSuccess(
                 USERNAME.equals(loginData.name) &&
                         PASSWORD.equals(loginData.password)
@@ -35,8 +35,8 @@ public class UserLocalDataSource extends UserBaseDataSource {
     }
 
     @Override
-    public LoginEntity getLoginData() {
-        return new LoginEntity(USERNAME, PASSWORD, "");
+    public UserEntity getLoginData() {
+        return new UserEntity(USERNAME, PASSWORD, "");
     }
 
     //endregion

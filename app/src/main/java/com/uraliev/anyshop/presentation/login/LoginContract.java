@@ -1,7 +1,7 @@
 package com.uraliev.anyshop.presentation.login;
 
 
-import com.uraliev.anyshop.core.BaseMVPContract;
+import com.uraliev.core.BaseMVPContract;
 
 public interface LoginContract {
     interface View extends BaseMVPContract.View<Presenter> {

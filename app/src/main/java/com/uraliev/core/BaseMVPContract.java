@@ -1,4 +1,4 @@
-package com.uraliev.anyshop.core;
+package com.uraliev.core;
 
 
 public interface BaseMVPContract {

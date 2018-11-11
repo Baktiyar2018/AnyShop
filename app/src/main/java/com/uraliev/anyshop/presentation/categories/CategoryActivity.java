@@ -1,4 +1,4 @@
-package com.uraliev.anyshop.presentation.categoryProduct;
+package com.uraliev.anyshop.presentation.categories;
 
 import android.support.v7.app.AppCompatActivity;
 

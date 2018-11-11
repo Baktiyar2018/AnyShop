@@ -1,4 +1,4 @@
-package com.uraliev.anyshop.presentation.listProduct;
+package com.uraliev.anyshop.presentation.products;
 
 import android.support.v4.app.Fragment;
 

@@ -1,4 +1,4 @@
-package com.uraliev.anyshop.core.callback;
+package com.uraliev.core.callback;
 
 
 public interface BaseCallback<T> {

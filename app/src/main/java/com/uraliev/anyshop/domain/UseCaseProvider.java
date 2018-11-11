@@ -2,11 +2,12 @@ package com.uraliev.anyshop.domain;
 
 
 import com.uraliev.anyshop.data.RepositoryProvider;
-import com.uraliev.anyshop.domain.SignIn.LoginUseCases;
+import com.uraliev.anyshop.domain.SignIn.SignInInteractor;
+import com.uraliev.anyshop.domain.SignIn.SignInUseCases;
 
 public class UseCaseProvider {
-    public static LoginUseCases getLoginUseCase(){
-        return new LoginInteractor(
+    public static SignInUseCases getLoginUseCase(){
+        return new SignInInteractor(
                 RepositoryProvider.getUserRepository()
         );
     }

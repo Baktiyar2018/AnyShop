@@ -2,16 +2,17 @@ package com.uraliev.anyshop.presentation.login;
 
 import android.util.Log;
 
-import com.uraliev.anyshop.domain.SignIn.LoginUseCases;
-import com.uraliev.anyshop.model.LoginEntity;
+
+import com.uraliev.anyshop.domain.SignIn.SignInUseCases;
+import com.uraliev.anyshop.model.UserEntity;
 
 
 // Created by askar on 11/2/18.
 public class LoginPresenter implements LoginContract.Presenter{
     private LoginContract.View mView = null;
-    private LoginUseCases mLoginUseCases;
+    private SignInUseCases mLoginUseCases;
 
-    public LoginPresenter(LoginUseCases loginUseCases){
+    public LoginPresenter(SignInUseCases loginUseCases){
         mLoginUseCases = loginUseCases;
     }
 
@@ -29,8 +30,8 @@ public class LoginPresenter implements LoginContract.Presenter{
     @Override
     public void onLoginClick(String name, String password) {
         if (mView != null && mLoginUseCases != null) {
-            LoginEntity loginEntity = new LoginEntity(name, password, "");
-            mLoginUseCases.checkLogin(loginEntity, new LoginUseCases.UCCheckLoginCallback(){
+            UserEntity loginEntity = new UserEntity(name, password, "");
+            mLoginUseCases.checkLogin(loginEntity, new SignInUseCases.UCCheckLoginCallback(){
                 @Override
                 public void onSuccess(Boolean result) {
                     if (result){

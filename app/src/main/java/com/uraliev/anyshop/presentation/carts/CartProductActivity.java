@@ -1,4 +1,4 @@
-package com.uraliev.anyshop.presentation.toCartProduct;
+package com.uraliev.anyshop.presentation.carts;
 
 import android.support.v7.app.AppCompatActivity;
 

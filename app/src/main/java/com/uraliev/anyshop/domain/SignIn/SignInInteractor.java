@@ -1,7 +1,7 @@
 package com.uraliev.anyshop.domain.SignIn;
 
 import com.uraliev.anyshop.data.user.UserDataSource;
-import com.uraliev.anyshop.model.LoginEntity;
+import com.uraliev.anyshop.model.UserEntity;
 
 public class SignInInteractor implements SignInUseCases {
 
@@ -12,8 +12,8 @@ public class SignInInteractor implements SignInUseCases {
     private UserDataSource mUserDataSource;
 
     @Override
-    public void checkLogin(LoginEntity loginEntity, SignInUseCases.UCCheckLoginCallback callback) {
-        LoginEntity currentUserData = mUserDataSource.getLoginData();
+    public void checkLogin(UserEntity loginEntity, SignInUseCases.UCCheckLoginCallback callback) {
+        UserEntity currentUserData = mUserDataSource.getLoginData();
 
         if (currentUserData != null) {
             callback.onSuccess(

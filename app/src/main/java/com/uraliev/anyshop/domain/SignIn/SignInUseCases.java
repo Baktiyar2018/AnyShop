@@ -1,10 +1,10 @@
 package com.uraliev.anyshop.domain.SignIn;
 
-import com.uraliev.anyshop.core.callback.BaseCallback;
-import com.uraliev.anyshop.model.LoginEntity;
+import com.uraliev.core.callback.BaseCallback;
+import com.uraliev.anyshop.model.UserEntity;
 
 public interface SignInUseCases {
-    void checkLogin(LoginEntity loginEntity, UCCheckLoginCallback callback);
+    void checkLogin(UserEntity loginEntity, UCCheckLoginCallback callback);
 
     abstract class UCCheckLoginCallback implements BaseCallback<Boolean> {
         @Override

@@ -20,9 +20,9 @@ public class UserRepository implements UserDataSource {
 
     private static UserRepository INSTANCE;
 
-    public static UserDataSource getInstance(
-            UserDataSource localDataSource,
-            UserDataSource remoteDataSource
+    public static ProductDataSource getInstance(
+            ProductDataSource localDataSource,
+            ProductDataSource remoteDataSource
     ){
         if (INSTANCE == null) {
             INSTANCE = new UserRepository(localDataSource, remoteDataSource);

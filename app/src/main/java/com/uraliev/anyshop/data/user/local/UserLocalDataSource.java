@@ -24,7 +24,7 @@ public class UserLocalDataSource extends UserBaseDataSource {
     //endregion
 
 
-    //region Contract
+    //regio n Contract
 
     @Override
     public void checkLogin(UserEntity loginData, DSCheckLoginCallback callback) {

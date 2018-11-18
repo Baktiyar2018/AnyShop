@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,11 @@ import android.widget.Toast;
 
 import com.uraliev.anyshop.MainActivity;
 import com.uraliev.anyshop.R;
+import com.uraliev.anyshop.data.RepositoryProvider;
+import com.uraliev.anyshop.data.product.ProductDataSource;
+import com.uraliev.anyshop.model.Product;
+
+import java.util.ArrayList;
 
 
 public class LoginFragment extends Fragment
@@ -50,6 +56,26 @@ public class LoginFragment extends Fragment
     }
 
     //endregion
+
+
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        RepositoryProvider.getProductRepository().getProducts(new ProductDataSource.ProductsCallback() {
+            @Override
+            public void onSuccess(ArrayList<Product> result) {
+                for(Product product :result){
+                    Log.d("ololo",product.toString());
+                }
+            }
+
+            @Override
+            public void onFail(String message) {
+
+            }
+        });
+    }
 
     private void init(View rootView){
         mLoginBtn = rootView.findViewById(R.id.fragment_login_btn);

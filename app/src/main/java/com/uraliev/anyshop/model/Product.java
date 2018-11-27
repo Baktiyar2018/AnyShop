@@ -1,5 +1,7 @@
 package com.uraliev.anyshop.model;
 
+import android.support.annotation.Nullable;
+
 import com.google.gson.annotations.SerializedName;
 
 import io.realm.RealmObject;
@@ -17,9 +19,11 @@ public class Product extends RealmObject {
      private  String description;
 
      @SerializedName("tagline")
+     @Nullable
      private  String tagline;
 
      @SerializedName("image_url")
+     @Nullable
      private  String image_url;
      //Region Constructor
 

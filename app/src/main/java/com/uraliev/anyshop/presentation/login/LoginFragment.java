@@ -19,7 +19,7 @@ import com.uraliev.anyshop.data.RepositoryProvider;
 import com.uraliev.anyshop.data.product.ProductDataSource;
 import com.uraliev.anyshop.model.Product;
 
-import java.util.ArrayList;
+import java.util.List;
 
 
 public class LoginFragment extends Fragment
@@ -63,8 +63,10 @@ public class LoginFragment extends Fragment
     public void onResume() {
         super.onResume();
         RepositoryProvider.getProductRepository().getProducts(new ProductDataSource.ProductsCallback() {
+
+
             @Override
-            public void onSuccess(ArrayList<Product> result) {
+            public void onSuccess(List<Product> result) {
                 for(Product product :result){
                     Log.d("ololo",product.toString());
                 }
